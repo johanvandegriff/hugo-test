@@ -1,0 +1,28 @@
+---
+title: "My Second Post"
+date: 2022-07-31T01:30:35-04:00
+draft: false
+---
+
+This one is in html!
+<b>bold</b>
+<script>
+        function myRequest(url) {
+            let xhr = new XMLHttpRequest();
+            xhr.open('get', url);
+            xhr.send();
+
+            xhr.onload = function () {
+                console.log(xhr.response);
+                          output.innerText = xhr.response + '\n';
+        }
+        }
+
+function myfunction() {
+  myRequest("https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-cd43a9dd-0738-46dc-9ee7-6caebf29a012/default/TestMP?iterations=200&max=250&min=7");
+}
+
+
+</script>
+<button onclick="myfunction()">run it!</button>
+    <pre id="output" style="padding: 10px; overflow-x: auto"></pre>
